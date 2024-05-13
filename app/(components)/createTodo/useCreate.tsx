@@ -80,7 +80,7 @@ const useCreate = (onSelectColor?: OnSelectColor) => {
 
   useEffect(() => {
     const filteredUser = create.filter(
-      (userData: any) => userData.email === session?.user?.email
+      (userData: any) => userData?.email === session?.user?.email
     );
     setUser(filteredUser as any);
   }, [create]);
